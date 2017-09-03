@@ -3,3 +3,4 @@ values() is static method that is added by the compiler.
 enum type is erased when running.
 all enums extends from java.land.Enum so you can not create a enum via inherit.
 using EEnumSet instead of flags is fast,unchangable and clear.
+-----------------
