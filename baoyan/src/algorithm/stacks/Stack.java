@@ -25,6 +25,7 @@ public class Stack<Item> implements Iterable<Item> {
     }
     //重新调整大小
     private void resize(int max){
+
         Item[] temp=(Item[])new Object[max];
         System.arraycopy(a, 0, temp, 0, size);
         a=temp;
