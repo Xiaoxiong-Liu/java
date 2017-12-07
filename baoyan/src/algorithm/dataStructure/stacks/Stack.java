@@ -1,4 +1,4 @@
-package algorithm.stacks;
+package algorithm.dataStructure.stacks;
 
 import java.util.Iterator;
 

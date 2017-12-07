@@ -1,6 +1,6 @@
-package algorithm.queue;
+package algorithm.dataStructure.queue;
 
-import algorithm.linkedLists.LinkedList;
+import algorithm.dataStructure.linkedLists.LinkedList;
 
 import java.util.Iterator;
 

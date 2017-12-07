@@ -1,6 +1,6 @@
-package algorithm.bags;
+package algorithm.dataStructure.bags;
 
-import algorithm.linkedLists.LinkedList;
+import algorithm.dataStructure.linkedLists.LinkedList;
 
 /**
  * Created by LiuXiaoxiong on 2017/12/6.

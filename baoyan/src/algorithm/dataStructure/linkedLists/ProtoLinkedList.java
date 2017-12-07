@@ -1,4 +1,4 @@
-package algorithm.linkedLists;
+package algorithm.dataStructure.linkedLists;
 import java.util.LinkedList;
 /**
  * Created by liuxiaoxiong on 2017/10/8.

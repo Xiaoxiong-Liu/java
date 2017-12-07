@@ -1,6 +1,6 @@
-package algorithm.stacks;
+package algorithm.dataStructure.stacks;
 
-import algorithm.linkedLists.LinkedList;
+import algorithm.dataStructure.linkedLists.LinkedList;
 
 import java.util.Iterator;
 

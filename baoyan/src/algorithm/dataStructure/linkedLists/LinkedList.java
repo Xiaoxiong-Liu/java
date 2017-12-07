@@ -1,4 +1,4 @@
-package algorithm.linkedLists;
+package algorithm.dataStructure.linkedLists;
 
 import java.util.Iterator;
 
