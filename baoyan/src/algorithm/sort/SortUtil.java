@@ -88,8 +88,65 @@ public class SortUtil {
 
     }
 
+    //二分查找
+    public static int binarySearch(Comparable[] a,Comparable target){
+        int len=a.length;
+        int low=0;
+        int high=len-1;
+        int mid=(low+high)/2;
+        while(low<high){
+            if(less(a[mid],target)){
+                low=mid+1;
+                mid=(low+high)/2;
+            }else if(less(target,a[mid])){
+                high=mid;
+                mid=(high+low)/2;
+            }else{
+                return mid;
+            }
+        }
+        if(target.equals(a[low]))return mid;
+        if(target.equals(a[high]))return high;
+
+        return -1;
+    }
+
+    //归并排序
+    public static void mergeSort(Comparable[] a,int low,int high){
+
+
+        if(low>=high)return;
+        mergeSort(a,low,(high+low)/2);
+        mergeSort(a,(low+high)/2+1,high);
+        merge(a,low,(low+high)/2,high);
+
+    }
+
+    private static void merge(Comparable[] a,int low,int mid ,int high){
+        Comparable[] temp=new Comparable[a.length];
+        for (int i = 0; i < a.length; i++) {
+            temp[i]=a[i];
+        }
+        int i=low;
+        int j=mid+1;
+        for(int k=low;k<=high;k++){
+            //左数列已经取完了，后半部分肯定是右数列，不需要更改了
+            if(i>mid)                       return;
+            //剩下的都是左半数列
+            else if(j>high)                 a[k]=temp[i++];
+            //从左边取元素
+            else if(less(temp[j],temp[i]))  a[k]=temp[j++];
+            else                            a[k]=temp[i++];
+        }
+    }
+
+    //归并排序
+    public static void mergeSort2(Comparable[] a,int low,int high){
+
+    }
+
     public static void main(String[] args) {
-        Integer[]a={1,2,3,4,5,6,0};
+        Integer[]a={1,2,3,6,9,0,45,7,98,55,89,30,31,32,33,34};
         show(a);
         System.out.println("is sorted?   "+isSorted(a));
 
@@ -103,6 +160,12 @@ public class SortUtil {
         shuffle(a);
         shellSort(a);
         System.out.print("After shell sort:     ");
+        show(a);
+        System.out.println("Binary search test:"+binarySearch(a,98));
+
+        shuffle(a);
+        mergeSort(a,0,a.length-1);
+        System.out.print("After merge sort:     ");
         show(a);
 
     }
